@@ -1,6 +1,6 @@
 package com.post.controller;
 
-import com.post.service.ManagerService;
+import com.post.service.ClientService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/post/manager")
-@Tag(name = "Manager", description = "API for manager")
+@RequestMapping("/post/client")
+@Tag(name = "Client", description = "API for client")
 @RequiredArgsConstructor
-public class ManagerController {
+public class ClientController {
 
-    private final ManagerService managerService;
+    private final ClientService clientService;
 
     @GetMapping
-    public ResponseEntity<Boolean> getAllParcels() {
+    public ResponseEntity<Boolean> getMyParcel(){
         return ResponseEntity.ok(true);
     }
 }
