@@ -1,5 +1,6 @@
 package com.post.domain.entities;
 
+import com.post.domain.entities.enums.ParcelState;
 import com.post.domain.entities.enums.ParcelType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -44,4 +45,8 @@ public class Parcel {
 
     @Column(name = "NAME_RECIPIENT")
     private String nameRecipient;
+
+    @Column(name = "STATE")
+    @Enumerated(EnumType.STRING)
+    private ParcelState state;
 }
