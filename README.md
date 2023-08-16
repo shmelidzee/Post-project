@@ -1,12 +1,15 @@
 # Post project
 ![image](https://github.com/shmelidzee/post-project/assets/100793483/dadf4002-5f3d-44f4-913c-4565dceebeda)
 
+
 # How to run application
 1.
 2.
 3. Open http://localhost:8085/swagger-ui/index.html#/ in browser
 4. Select the required request and execute it
 5. Check results requests
+![image](https://github.com/shmelidzee/post-project/assets/100793483/b3ae7a62-51c9-43de-9496-9f0d2f4323af)
+
 
 # How to run tests
 1. Clone repository, go to root directory
