@@ -60,6 +60,7 @@ public class ManagerServiceImpl implements ManagerService {
                 .addressRecipient(command.getAddress())
                 .indexRecipient(command.getIndex())
                 .type(command.getType())
+                .nameRecipient(command.getName())
                 .status(ParcelStatus.DECORATED)
                 .build();
     }

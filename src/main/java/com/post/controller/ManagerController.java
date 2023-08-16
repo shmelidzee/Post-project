@@ -36,7 +36,7 @@ public class ManagerController {
                             content = @Content(mediaType = "application/json", schema = @Schema(implementation = ParcelDTO.class))),
                     @ApiResponse(responseCode = "400", description = "Bad request")
             },
-            tags = "Client")
+            tags = "Manager")
     public ResponseEntity<ParcelDTO> updateStatusParcel(@RequestBody UpdateParcelCommand updateParcelCommand) {
         return ResponseEntity.ok(managerService.updateParcel(updateParcelCommand));
     }
@@ -50,7 +50,7 @@ public class ManagerController {
                             content = @Content(mediaType = "application/json", schema = @Schema(implementation = ParcelDTO.class))),
                     @ApiResponse(responseCode = "400", description = "Bad request")
             },
-            tags = "Client")
+            tags = "Manager")
     public ResponseEntity<ParcelDTO> registerParcel(@RequestBody RegisterParcelCommand registerParcelCommand) {
         return ResponseEntity.ok(managerService.registerParcel(registerParcelCommand));
     }
@@ -63,7 +63,7 @@ public class ManagerController {
                             description = "Create new office"),
                     @ApiResponse(responseCode = "400", description = "Bad request")
             },
-            tags = "Client")
+            tags = "Manager")
     public ResponseEntity<Void> createNewOffice(@RequestBody PostOfficeCommand postOfficeCommand) {
         managerService.createNewPostOffice(postOfficeCommand);
         return ResponseEntity.status(HttpStatus.OK).build();
