@@ -68,6 +68,7 @@ public class ManagerServiceImpl implements ManagerService {
         return ParcelDTO.builder()
                 .address(parcel.getAddressRecipient())
                 .type(parcel.getType())
+                .status(parcel.getStatus())
                 .index(parcel.getIndexRecipient())
                 .id(parcel.getId())
                 .name(parcel.getNameRecipient())

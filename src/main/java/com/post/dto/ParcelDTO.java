@@ -1,5 +1,6 @@
 package com.post.dto;
 
+import com.post.domain.enums.ParcelStatus;
 import com.post.domain.enums.ParcelType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -20,4 +21,5 @@ public class ParcelDTO {
     private ParcelType type;
     private String index;
     private String address;
+    private ParcelStatus status;
 }
