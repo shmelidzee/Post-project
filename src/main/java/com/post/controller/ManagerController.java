@@ -1,5 +1,6 @@
 package com.post.controller;
 
+import com.post.command.PostOfficeCommand;
 import com.post.command.RegisterParcelCommand;
 import com.post.command.UpdateParcelCommand;
 import com.post.dto.ParcelDTO;
@@ -10,6 +11,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -51,5 +53,19 @@ public class ManagerController {
             tags = "Client")
     public ResponseEntity<ParcelDTO> registerParcel(@RequestBody RegisterParcelCommand registerParcelCommand) {
         return ResponseEntity.ok(managerService.registerParcel(registerParcelCommand));
+    }
+
+    @PostMapping("/office")
+    @Operation(summary = "Create new office",
+            description = "Create new office",
+            responses = {
+                    @ApiResponse(responseCode = "200",
+                            description = "Create new office"),
+                    @ApiResponse(responseCode = "400", description = "Bad request")
+            },
+            tags = "Client")
+    public ResponseEntity<Void> createNewOffice(@RequestBody PostOfficeCommand postOfficeCommand) {
+        managerService.createNewPostOffice(postOfficeCommand);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 }

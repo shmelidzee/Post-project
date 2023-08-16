@@ -9,7 +9,17 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
 import java.time.Instant;
 
 @Entity
@@ -19,7 +29,7 @@ import java.time.Instant;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@SequenceGenerator(name = "SQ_HISTORY_ID_GENERATOR", sequenceName = "SQ_HISTORY_ID", allocationSize = 1)
+@SequenceGenerator(name = "SQ_HISTORY_ID_GENERATOR", sequenceName = "HISTORY_ID_SEQ", allocationSize = 1)
 public class History {
 
     @Id
