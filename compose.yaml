@@ -10,8 +10,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: post_db
-
-  country-service:
+    volumes:
+      - ./src/main/resources/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+  post-service:
     container_name: post-service
     image: post-service:1.0.0
     build:
