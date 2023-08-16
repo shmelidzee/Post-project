@@ -8,4 +8,4 @@
 1. Clone repository, go to root directory
 2. Run ./gradlew clean build test in root directory
 3. You will see the test results in the console
-![image](https://github.com/shmelidzee/post-project/assets/100793483/11b55404-b913-47f3-a1d1-7db6bdacd7ba)
+![image](https://github.com/shmelidzee/post-project/assets/100793483/84b8a32a-0a4b-4dfb-81fe-c9593874eb8c)
