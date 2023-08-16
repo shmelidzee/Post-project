@@ -6,7 +6,9 @@ import com.post.domain.entities.History;
 import com.post.domain.entities.Parcel;
 import com.post.domain.enums.ParcelStatus;
 import com.post.domain.enums.ParcelType;
+import com.post.repository.HistoryRepository;
 import com.post.repository.ParcelRepository;
+import com.post.repository.PostRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -15,12 +17,16 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.Instant;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 class ManagerServiceImplTest {
 
+    @Mock
+    HistoryRepository historyRepository;
+    @Mock
+    PostRepository postRepository;
     @Mock
     ParcelRepository parcelRepository;
     @InjectMocks
