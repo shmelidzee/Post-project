@@ -1,6 +1,6 @@
-package com.post.domain.entities.enums;
+package com.post.domain.enums;
 
-public enum ParcelState {
+public enum ParcelStatus {
     DECORATED("Оформлен"),
     SENT_TO_DEPARTMENT("Отправлен в отдел"),
     SENT_FROM_DEPARTMENT("Отправлен клиенту"),
@@ -9,7 +9,7 @@ public enum ParcelState {
 
     private final String value;
 
-    private ParcelState(String value) {
+    private ParcelStatus(String value) {
         this.value = value;
     }
 

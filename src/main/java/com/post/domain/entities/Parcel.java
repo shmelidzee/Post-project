@@ -1,7 +1,7 @@
 package com.post.domain.entities;
 
-import com.post.domain.entities.enums.ParcelState;
-import com.post.domain.entities.enums.ParcelType;
+import com.post.domain.enums.ParcelStatus;
+import com.post.domain.enums.ParcelType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -25,7 +25,7 @@ import javax.persistence.Table;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@SequenceGenerator(name = "SQ_PARCEL_ID_GENERATOR", sequenceName = "SQ_PARCEL_ID", allocationSize = 1)
+@SequenceGenerator(name = "SQ_PARCEL_ID_GENERATOR", sequenceName = "PARCEL_ID_SEQ", allocationSize = 1)
 public class Parcel {
 
     @Id
@@ -46,7 +46,7 @@ public class Parcel {
     @Column(name = "NAME_RECIPIENT")
     private String nameRecipient;
 
-    @Column(name = "STATE")
+    @Column(name = "STATUS")
     @Enumerated(EnumType.STRING)
-    private ParcelState state;
+    private ParcelStatus status;
 }

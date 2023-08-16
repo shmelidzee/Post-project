@@ -1,4 +1,4 @@
-package com.post.domain.entities.enums;
+package com.post.domain.enums;
 
 public enum ParcelType {
     LETTER("Письмо"),

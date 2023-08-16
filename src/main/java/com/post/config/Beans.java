@@ -25,7 +25,7 @@ import java.util.List;
 
 @Configuration
 @PropertySource("/application.properties")
-@EntityScan(basePackages = "com.post.entities")
+@EntityScan(basePackages = "com.post.domain.entities")
 public class Beans {
     String driverClassName = "org.postgresql.Driver";
 
