@@ -1,10 +1,10 @@
 package com.post.domain.enums;
 
 public enum ParcelType {
-    LETTER("Письмо"),
-    WRAPPER("Бандероль"),
-    PACKAGE("Посылка"),
-    POSTCARD("Октрытка");
+    LETTER("Letter"),
+    WRAPPER("Wrapper"),
+    PACKAGE("Package"),
+    POSTCARD("Postcard");
 
     private final String value;
 

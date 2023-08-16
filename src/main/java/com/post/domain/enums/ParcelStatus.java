@@ -1,11 +1,11 @@
 package com.post.domain.enums;
 
 public enum ParcelStatus {
-    DECORATED("Оформлен"),
-    SENT_TO_DEPARTMENT("Отправлен в отдел"),
-    SENT_FROM_DEPARTMENT("Отправлен клиенту"),
-    DELIVERED("Доставлен"),
-    RECEIVED("Получен");
+    DECORATED("Decorated"),
+    SENT_TO_DEPARTMENT("Sent to department"),
+    SENT_FROM_DEPARTMENT("Sent to client"),
+    DELIVERED("Delivered"),
+    RECEIVED("Received");
 
     private final String value;
 

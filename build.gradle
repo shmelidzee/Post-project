@@ -55,6 +55,8 @@ dependencies {
     testImplementation "org.testcontainers:junit-jupiter:1.17.6"
 }
 
+compileJava.options.encoding = 'UTF-8'
+
 test {
     useJUnitPlatform()
     include '**/*Test.class'
